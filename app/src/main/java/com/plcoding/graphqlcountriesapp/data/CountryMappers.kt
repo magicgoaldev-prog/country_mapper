@@ -18,7 +18,7 @@ fun CountryQuery.Country.toDetailCountry() : DetailCountry {
     )
 }
 
-fun CountriesQuery.Country.toDetailCountry() : SimpleCountry {
+fun CountriesQuery.Country.toSimpleCountry() : SimpleCountry {
     return SimpleCountry(
         code = code,
         name = name,

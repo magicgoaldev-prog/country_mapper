@@ -15,7 +15,8 @@ class ApolloCountryClient(
             .execute()
             .data
             ?.countries
-            ?.map{}
+            ?.map { it.toSimpleCountry() }
+            ?: emptyList()
 
     }
 
