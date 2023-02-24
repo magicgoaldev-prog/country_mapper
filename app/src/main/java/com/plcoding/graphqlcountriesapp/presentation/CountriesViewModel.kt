@@ -31,6 +31,14 @@ class CountriesViewModel (
         }
     }
 
+    fun selectCountry(code: String){
+        viewModelScope.launch {
+            _state.update { it.copy(
+                selectedCountry = getCountryUseCase.execute(code)
+            ) }
+        }
+    }
+
         data class CountriesState(
             val countries: List<SimpleCountry> = emptyList(),
             val isLoading: Boolean = false,
