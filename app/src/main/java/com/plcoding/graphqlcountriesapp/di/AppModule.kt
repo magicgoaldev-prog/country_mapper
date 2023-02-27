@@ -3,6 +3,7 @@ package com.plcoding.graphqlcountriesapp.di
 import com.apollographql.apollo3.ApolloClient
 import com.plcoding.graphqlcountriesapp.data.ApolloCountryClient
 import com.plcoding.graphqlcountriesapp.domain.CountryClient
+import com.plcoding.graphqlcountriesapp.domain.GetCountriesUseCase
 import com.plcoding.graphqlcountriesapp.domain.GetCountryUseCase
 import dagger.Module
 import dagger.Provides
@@ -30,7 +31,13 @@ object AppModule {
 
     @Provides
     @Singleton
-    fun provideGetCountriesUseCase(countryClient: CountryClient) : GetCountryUseCase{ //country client needs apollo cliente
+    fun provideGetCountriesUseCase(countryClient: CountryClient) : GetCountriesUseCase{ //country client needs apollo cliente
+        return GetCountriesUseCase(countryClient)
+    }
+
+    @Provides
+    @Singleton
+    fun provideGetCountryUseCase(countryClient: CountryClient) : GetCountryUseCase{ //country client needs apollo cliente
         return GetCountryUseCase(countryClient)
     }
 }
