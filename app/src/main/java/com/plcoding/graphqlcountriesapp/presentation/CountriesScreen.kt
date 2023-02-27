@@ -50,7 +50,7 @@ private fun CountryItem( //fun to show each emoji/country and capital
         verticalAlignment = Alignment.CenterVertically
     ) {
         Text(
-            text = country.emoji,
+            text = country.emoji, //element that goes the left side of each country to show the country simbol
             fontSize = 30.sp
         )
         Spacer(modifier = Modifier.width(16.dp)) //just a spacer to organize each country sepaartion
