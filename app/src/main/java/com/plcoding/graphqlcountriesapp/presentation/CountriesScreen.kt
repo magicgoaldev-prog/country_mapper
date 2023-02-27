@@ -1,5 +1,6 @@
 package com.plcoding.graphqlcountriesapp.presentation
 
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
@@ -26,7 +27,13 @@ fun CountriesScreen(
         }else{
             LazyColumn(modifier = Modifier.fillMaxSize()){
                 items(state.countries) { country ->
-
+                    CountryItem( //recyclerview to show every countries
+                        country = country,
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .clickable { onSelectedCountry(country.code) }
+                            .padding(16.dp)
+                    )
                 }
             }
         }
