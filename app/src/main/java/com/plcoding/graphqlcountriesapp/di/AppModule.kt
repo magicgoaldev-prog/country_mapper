@@ -1,6 +1,8 @@
 package com.plcoding.graphqlcountriesapp.di
 
 import com.apollographql.apollo3.ApolloClient
+import com.plcoding.graphqlcountriesapp.data.ApolloCountryClient
+import com.plcoding.graphqlcountriesapp.domain.CountryClient
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -17,5 +19,11 @@ object AppModule {
         return ApolloClient.Builder()
             .serverUrl("http://countries.trevorblades.com/graphql")
             .build()
+    }
+
+    @Provides
+    @Singleton
+    fun provideCountryClient(apolloClient: ApolloClient) : CountryClient{ //country client needs apollo cliente
+        return ApolloCountryClient(apolloClient)
     }
 }
