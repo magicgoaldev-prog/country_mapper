@@ -11,6 +11,8 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.compose.ui.window.Dialog
+import com.plcoding.graphqlcountriesapp.domain.DetailCountry
 import com.plcoding.graphqlcountriesapp.domain.SimpleCountry
 
 @Composable
@@ -36,6 +38,41 @@ fun CountriesScreen(
                     )
                 }
             }
+        }
+    }
+}
+
+@Composable
+private fun CountryDialog(
+    country: DetailCountry,
+    onDismiss: () -> Unit,
+    modifier: Modifier = Modifier
+){
+    Dialog(onDismissRequest = onDismiss) {
+        Column(
+            modifier = modifier
+        ) {
+            Row(
+                modifier = Modifier.fillMaxWidth()
+            ) {
+                Text(
+                    text = country.emoji,
+                    fontSize = 30.sp
+                )
+                Spacer(modifier = Modifier.width(16.dp))
+                Text(
+                    text = country.name,
+                    fontSize = 24.sp
+                )
+            }
+            Spacer(modifier = Modifier.width(16.dp))
+            Text(text = "Continent: "+ country.continent)
+            Spacer(modifier = Modifier.width(8.dp))
+            Text(text = "Currency: "+ country.currency)
+            Spacer(modifier = Modifier.width(8.dp))
+            Text(text = "Capital: "+ country.capital)
+            Spacer(modifier = Modifier.width(8.dp))
+            Text(text = "Languague(s): "+ country.languages)
         }
     }
 }
