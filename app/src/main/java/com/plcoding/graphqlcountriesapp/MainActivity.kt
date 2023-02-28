@@ -19,7 +19,7 @@ class MainActivity : ComponentActivity() {
             GraphQlCountriesAppTheme {
                 val viewModel = hiltViewModel<CountriesViewModel>()
                 val state by viewModel.state.collectAsState()
-                CountriesScreen(state = state, onSelectedCountry = { viewModel.selectCountry(it)}, onDismissCountryDialog = {})
+                CountriesScreen(state = state, onSelectedCountry = { viewModel.selectCountry(it)}, onDismissCountryDialog = viewModel::dismissCountryDialog)
 
             }
         }
