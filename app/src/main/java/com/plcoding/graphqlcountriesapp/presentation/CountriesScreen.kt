@@ -7,6 +7,7 @@ import androidx.compose.foundation.lazy.items
 import androidx.compose.material.CircularProgressIndicator
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
@@ -48,6 +49,10 @@ private fun CountryDialog(
     onDismiss: () -> Unit,
     modifier: Modifier = Modifier
 ){
+    //if had multiple languages will fit like this: German, English, Portuguese...
+    val joinedLanguages = remember(country.languages) {
+        country.languages.joinToString()
+    }
     Dialog(onDismissRequest = onDismiss) {
         Column(
             modifier = modifier
