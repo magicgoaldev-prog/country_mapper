@@ -84,15 +84,15 @@ private fun CountryDialog(
                     fontSize = 24.sp
                 )
             }
-            Spacer(modifier = Modifier.width(16.dp))
+            Spacer(modifier = Modifier.height(16.dp))
             Text(text = "Continent: "+ country.continent)
-            Spacer(modifier = Modifier.width(8.dp))
+            Spacer(modifier = Modifier.height(8.dp))
             Text(text = "Currency: "+ country.currency)
-            Spacer(modifier = Modifier.width(8.dp))
+            Spacer(modifier = Modifier.height(8.dp))
             Text(text = "Capital: "+ country.capital)
-            Spacer(modifier = Modifier.width(8.dp))
+            Spacer(modifier = Modifier.height(8.dp))
             Text(text = "Languague(s): $joinedLanguages")
-            Spacer(modifier = Modifier.width(8.dp))
+            Spacer(modifier = Modifier.height(8.dp))
         }
     }
 }
