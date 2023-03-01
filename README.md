@@ -18,6 +18,6 @@
    + Android;
    + Jetpack Compose.
   
-   ### Imagens Mobile do projeto:
+   ### Images Mobile Project:
 
 ![2](https://user-images.githubusercontent.com/79876042/222159736-dbf340dd-4588-40ec-b124-42fe5192fabb.png)
