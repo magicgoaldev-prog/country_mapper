@@ -21,3 +21,4 @@
    ### Images Mobile Project:
 
 ![2](https://user-images.githubusercontent.com/79876042/222159736-dbf340dd-4588-40ec-b124-42fe5192fabb.png)
+![375x785](https://user-images.githubusercontent.com/79876042/222160015-f1fc3ed2-9088-4c16-aa19-c7e7112047b4.png)
