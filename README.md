@@ -13,7 +13,7 @@
   + Data;
   + Informations;
   
-  <strong>Technologies Used : </strong>
+  <strong>Technologies Used: </strong>
    + Kotlin;
    + Android;
    + Jetpack Compose.
